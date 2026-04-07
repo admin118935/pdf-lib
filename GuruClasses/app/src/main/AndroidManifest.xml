@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Guru Classes"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GuruClasses">
+
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.GuruClasses.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".LoginActivity" android:exported="false"/>
+        <activity android:name=".RegisterActivity" android:exported="false"/>
+        <activity android:name=".StudentDashboardActivity" android:exported="false"/>
+        <activity android:name=".AdminDashboardActivity" android:exported="false"/>
+        <activity android:name=".SubjectsActivity" android:exported="false"/>
+        <activity android:name=".VideoLecturesActivity" android:exported="false"/>
+        <activity android:name=".QuizActivity" android:exported="false"/>
+        <activity android:name=".QuizResultActivity" android:exported="false"/>
+        <activity android:name=".NotesActivity" android:exported="false"/>
+        <activity android:name=".ProgressActivity" android:exported="false"/>
+        <activity android:name=".LiveClassActivity" android:exported="false"/>
+        <activity android:name=".AdminStudentsActivity" android:exported="false"/>
+        <activity android:name=".AdminAddVideoActivity" android:exported="false"/>
+        <activity android:name=".AdminAddQuizActivity" android:exported="false"/>
+        <activity android:name=".AdminAddNotesActivity" android:exported="false"/>
+        <activity android:name=".AdminLiveClassActivity" android:exported="false"/>
+        <activity android:name=".ChangePasswordActivity" android:exported="false"/>
+
+    </application>
+
+</manifest>

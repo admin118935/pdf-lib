@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView android:id="@+id/ivBack" android:layout_width="32dp" android:layout_height="32dp"
+            android:src="@android:drawable/ic_media_previous" android:tint="@color/white"
+            android:layout_marginEnd="12dp" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Subjects" android:textSize="20sp" android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:columnCount="2" android:padding="12dp">
+
+            <androidx.cardview.widget.CardView android:id="@+id/cardMaths"
+                android:layout_width="0dp" android:layout_height="100dp"
+                android:layout_columnWeight="1" android:layout_margin="8dp"
+                app:cardElevation="4dp" app:cardCornerRadius="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:gravity="center"
+                    android:background="@color/subject_math">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="&#8721;" android:textSize="28sp" android:textColor="@color/white"
+                        android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Mathematics" android:textSize="14sp" android:textColor="@color/white"
+                        android:textStyle="bold" android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView android:id="@+id/cardGK"
+                android:layout_width="0dp" android:layout_height="100dp"
+                android:layout_columnWeight="1" android:layout_margin="8dp"
+                app:cardElevation="4dp" app:cardCornerRadius="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:gravity="center"
+                    android:background="@color/subject_gk">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="&#127758;" android:textSize="28sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="General Knowledge" android:textSize="13sp" android:textColor="@color/white"
+                        android:textStyle="bold" android:layout_marginTop="4dp" android:gravity="center" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView android:id="@+id/cardHindi"
+                android:layout_width="0dp" android:layout_height="100dp"
+                android:layout_columnWeight="1" android:layout_margin="8dp"
+                app:cardElevation="4dp" app:cardCornerRadius="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:gravity="center"
+                    android:background="@color/subject_hindi">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="&#2361;" android:textSize="32sp" android:textColor="@color/white"
+                        android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Hindi" android:textSize="14sp" android:textColor="@color/white"
+                        android:textStyle="bold" android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView android:id="@+id/cardEnglish"
+                android:layout_width="0dp" android:layout_height="100dp"
+                android:layout_columnWeight="1" android:layout_margin="8dp"
+                app:cardElevation="4dp" app:cardCornerRadius="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:gravity="center"
+                    android:background="@color/subject_english">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="A" android:textSize="32sp" android:textColor="@color/white"
+                        android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="English" android:textSize="14sp" android:textColor="@color/white"
+                        android:textStyle="bold" android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView android:id="@+id/cardScience"
+                android:layout_width="0dp" android:layout_height="100dp"
+                android:layout_columnWeight="1" android:layout_margin="8dp"
+                app:cardElevation="4dp" app:cardCornerRadius="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:gravity="center"
+                    android:background="@color/subject_science">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="&#128300;" android:textSize="28sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Science" android:textSize="14sp" android:textColor="@color/white"
+                        android:textStyle="bold" android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView android:id="@+id/cardBiology"
+                android:layout_width="0dp" android:layout_height="100dp"
+                android:layout_columnWeight="1" android:layout_margin="8dp"
+                app:cardElevation="4dp" app:cardCornerRadius="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:gravity="center"
+                    android:background="@color/subject_biology">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="&#127807;" android:textSize="28sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Biology" android:textSize="14sp" android:textColor="@color/white"
+                        android:textStyle="bold" android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView android:id="@+id/cardChemistry"
+                android:layout_width="0dp" android:layout_height="100dp"
+                android:layout_columnWeight="1" android:layout_margin="8dp"
+                app:cardElevation="4dp" app:cardCornerRadius="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:gravity="center"
+                    android:background="@color/subject_chemistry">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="&#9878;" android:textSize="28sp" android:textColor="@color/white" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Chemistry" android:textSize="14sp" android:textColor="@color/white"
+                        android:textStyle="bold" android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView android:id="@+id/cardPhysics"
+                android:layout_width="0dp" android:layout_height="100dp"
+                android:layout_columnWeight="1" android:layout_margin="8dp"
+                app:cardElevation="4dp" app:cardCornerRadius="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:orientation="vertical" android:gravity="center"
+                    android:background="@color/subject_physics">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="&#9889;" android:textSize="28sp" android:textColor="@color/white" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Physics" android:textSize="14sp" android:textColor="@color/white"
+                        android:textStyle="bold" android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+    </ScrollView>
+</LinearLayout>

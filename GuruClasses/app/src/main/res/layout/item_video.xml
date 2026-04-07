@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@color/primary"
+            android:gravity="center">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="▶" android:textSize="28sp" android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView android:id="@+id/tvVideoTitle" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="Video Title"
+                android:textSize="15sp" android:textColor="@color/text_primary"
+                android:textStyle="bold" android:maxLines="2" />
+
+            <TextView android:id="@+id/tvSubject" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Subject"
+                android:textSize="12sp" android:textColor="@color/accent"
+                android:layout_marginTop="4dp" />
+
+            <TextView android:id="@+id/tvDescription" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="Description"
+                android:textSize="12sp" android:textColor="@color/text_secondary"
+                android:layout_marginTop="2dp" android:maxLines="2" />
+        </LinearLayout>
+
+        <ImageView android:id="@+id/ivPlay"
+            android:layout_width="36dp" android:layout_height="36dp"
+            android:src="@android:drawable/ic_media_play"
+            android:tint="@color/primary" android:layout_marginStart="8dp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
