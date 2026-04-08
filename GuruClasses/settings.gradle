@@ -1,0 +1,2 @@
+rootProject.name = "Guru Classes"
+include ':app'

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_dark"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADMIN PANEL"
+                android:textSize="20sp"
+                android:textColor="@color/accent"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guru Classes"
+                android:textSize="13sp"
+                android:textColor="#BBDEFB" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivLogout"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:tint="@color/white" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Stats Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="10dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                        android:orientation="vertical" android:gravity="center" android:background="@color/primary">
+                        <TextView android:id="@+id/tvTotalStudents" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="0" android:textSize="24sp"
+                            android:textColor="@color/white" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Students" android:textSize="11sp" android:textColor="#BBDEFB" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="10dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                        android:orientation="vertical" android:gravity="center" android:background="@color/accent">
+                        <TextView android:id="@+id/tvTotalVideos" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="0" android:textSize="24sp"
+                            android:textColor="@color/white" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Videos" android:textSize="11sp" android:textColor="@color/white" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="10dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                        android:orientation="vertical" android:gravity="center" android:background="@color/green">
+                        <TextView android:id="@+id/tvTotalQuiz" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="0" android:textSize="24sp"
+                            android:textColor="@color/white" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Quiz" android:textSize="11sp" android:textColor="@color/white" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <!-- Admin Options -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Manage Karein" android:textSize="18sp" android:textColor="@color/text_primary"
+                android:textStyle="bold" android:layout_marginBottom="12dp" />
+
+            <androidx.cardview.widget.CardView android:id="@+id/cardManageStudents"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" app:cardElevation="4dp" app:cardCornerRadius="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
+                    <TextView android:layout_width="40dp" android:layout_height="40dp"
+                        android:text="&#128101;" android:textSize="24sp" android:gravity="center" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Students Manage Karein" android:textSize="16sp"
+                            android:textColor="@color/text_primary" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Dekhen, approve, remove karein" android:textSize="12sp"
+                            android:textColor="@color/text_secondary" />
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text=">" android:textSize="18sp" android:textColor="@color/primary" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView android:id="@+id/cardManageVideos"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" app:cardElevation="4dp" app:cardCornerRadius="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
+                    <TextView android:layout_width="40dp" android:layout_height="40dp"
+                        android:text="▶" android:textSize="24sp" android:gravity="center"
+                        android:textColor="@color/primary" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Videos Add/Manage Karein" android:textSize="16sp"
+                            android:textColor="@color/text_primary" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="YouTube video links add karein" android:textSize="12sp"
+                            android:textColor="@color/text_secondary" />
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text=">" android:textSize="18sp" android:textColor="@color/primary" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView android:id="@+id/cardManageQuiz"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" app:cardElevation="4dp" app:cardCornerRadius="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
+                    <TextView android:layout_width="40dp" android:layout_height="40dp"
+                        android:text="?" android:textSize="24sp" android:gravity="center"
+                        android:textColor="@color/accent" android:textStyle="bold" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Quiz/MCQ Add Karein" android:textSize="16sp"
+                            android:textColor="@color/text_primary" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Questions aur answers add karein" android:textSize="12sp"
+                            android:textColor="@color/text_secondary" />
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text=">" android:textSize="18sp" android:textColor="@color/primary" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView android:id="@+id/cardManageNotes"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" app:cardElevation="4dp" app:cardCornerRadius="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
+                    <TextView android:layout_width="40dp" android:layout_height="40dp"
+                        android:text="&#128196;" android:textSize="24sp" android:gravity="center" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Notes/PDF Add Karein" android:textSize="16sp"
+                            android:textColor="@color/text_primary" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Study material add karein" android:textSize="12sp"
+                            android:textColor="@color/text_secondary" />
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text=">" android:textSize="18sp" android:textColor="@color/primary" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView android:id="@+id/cardManageLive"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" app:cardElevation="4dp" app:cardCornerRadius="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
+                    <TextView android:layout_width="40dp" android:layout_height="40dp"
+                        android:text="&#128249;" android:textSize="24sp" android:gravity="center" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Live Class Schedule Karein" android:textSize="16sp"
+                            android:textColor="@color/text_primary" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Meeting link aur schedule set karein" android:textSize="12sp"
+                            android:textColor="@color/text_secondary" />
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text=">" android:textSize="18sp" android:textColor="@color/primary" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView android:id="@+id/cardChangePass"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" app:cardElevation="4dp" app:cardCornerRadius="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
+                    <TextView android:layout_width="40dp" android:layout_height="40dp"
+                        android:text="&#128274;" android:textSize="24sp" android:gravity="center" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Password Change Karein" android:textSize="16sp"
+                            android:textColor="@color/text_primary" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Admin password update karein" android:textSize="12sp"
+                            android:textColor="@color/text_secondary" />
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text=">" android:textSize="18sp" android:textColor="@color/primary" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

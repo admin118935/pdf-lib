@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Header -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/primary" android:padding="16dp"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <ImageView android:id="@+id/ivBack" android:layout_width="32dp" android:layout_height="32dp"
+            android:src="@android:drawable/ic_media_previous" android:tint="@color/white"
+            android:layout_marginEnd="12dp" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Quiz" android:textSize="20sp"
+            android:textColor="@color/white" android:textStyle="bold" />
+        <TextView android:id="@+id/tvProgress" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="1/10" android:textSize="14sp"
+            android:textColor="#BBDEFB" />
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <!-- Subject Filter Row -->
+            <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+                <LinearLayout android:id="@+id/llSubjectFilter" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:orientation="horizontal" />
+            </HorizontalScrollView>
+
+            <!-- Question Card -->
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" app:cardElevation="6dp" app:cardCornerRadius="16dp"
+                android:layout_marginBottom="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="20dp">
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginBottom="12dp">
+                        <TextView android:id="@+id/tvQNum" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="Q.1"
+                            android:textSize="14sp" android:textColor="@color/accent"
+                            android:textStyle="bold" android:layout_marginEnd="8dp" />
+                        <TextView android:id="@+id/tvSubjectTag" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="Maths"
+                            android:textSize="12sp" android:textColor="@color/primary"
+                            android:background="@drawable/tag_bg"
+                            android:paddingStart="8dp" android:paddingEnd="8dp"
+                            android:paddingTop="2dp" android:paddingBottom="2dp" />
+                    </LinearLayout>
+
+                    <TextView android:id="@+id/tvQuestion" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:text="Question yahan ayega?"
+                        android:textSize="17sp" android:textColor="@color/text_primary"
+                        android:lineSpacingExtra="4dp" android:layout_marginBottom="20dp" />
+
+                    <!-- Options -->
+                    <RadioGroup android:id="@+id/rgOptions" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:orientation="vertical">
+
+                        <RadioButton android:id="@+id/rbA" android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:text="Option A"
+                            android:textSize="15sp" android:padding="12dp"
+                            android:background="@drawable/option_bg"
+                            android:layout_marginBottom="8dp" android:buttonTint="@color/primary" />
+
+                        <RadioButton android:id="@+id/rbB" android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:text="Option B"
+                            android:textSize="15sp" android:padding="12dp"
+                            android:background="@drawable/option_bg"
+                            android:layout_marginBottom="8dp" android:buttonTint="@color/primary" />
+
+                        <RadioButton android:id="@+id/rbC" android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:text="Option C"
+                            android:textSize="15sp" android:padding="12dp"
+                            android:background="@drawable/option_bg"
+                            android:layout_marginBottom="8dp" android:buttonTint="@color/primary" />
+
+                        <RadioButton android:id="@+id/rbD" android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:text="Option D"
+                            android:textSize="15sp" android:padding="12dp"
+                            android:background="@drawable/option_bg"
+                            android:buttonTint="@color/primary" />
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnNext"
+                style="@style/ButtonPrimary" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="Next Question" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
